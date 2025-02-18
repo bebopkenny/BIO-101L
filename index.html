@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversity Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #15202B, #1B2836, #26364B);
+            background-size: 400% 400%;
+            animation: gradientBG 8s infinite alternate;
+            color: #E1E8ED;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .navbar {
+            width: 100%;
+            background: #192734;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar input {
+            padding: 5px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            width: 200px;
+            text-align: center;
+        }
+        .navbar button {
+            background-color: #1DA1F2;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        .feed-container {
+            width: 45%;
+            margin-top: 60px;
+        }
+        .post {
+            background: #192734;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .username {
+            font-weight: bold;
+            color: #1DA1F2;
+        }
+        .bio {
+            font-style: italic;
+            color: #8899A6;
+        }
+        .hashtags {
+            color: #1DA1F2;
+            font-weight: bold;
+        }
+        button {
+            background-color: #1DA1F2;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <input type="text" placeholder="Search...">
+        <button>🔍</button>
+    </div>
+    <div class="feed-container">
+        <div class="post">
+            <div class="user">
+                <a href="./profile.html">
+                <img src="./images/firesalamander.jpg" alt="User Icon">
+                </a>
+                <p class="username">@HoppinEvolution 🐸</p>
+            </div>
+            <p class="bio">Masters of land & water 🌍 | Moist skin crew 💦 | Metamorphosis experts 🐣➡️🐸</p>
+            <p>Hey everyone, it's us, the amphibians! 🌍 We’re the ultimate shape shifters, thriving in both water and on land. Our squad is made up of three groups: frogs, salamanders, and caecilians. We start our lives as tiny aquatic larvae before growing limbs and hopping onto land like pros. One of our coolest tricks? We can breathe through our skin! Some of us don’t even need lungs. But that also makes us super sensitive to changes in our environment. To stay safe, we’ve evolved some pretty wild defenses. Some of us are toxic, others can blend into our surroundings like ninjas, and a few of us can even let out high pitched screams to startle predators! We play a huge role in keeping ecosystems balanced by both hunting pests and being a food source for others. We’re living proof of evolution in action, showing the transition from water to land in real time. Pretty awesome, right? 🐸 #StaySlimy #MetamorphosisMasters</p>
+            <button onclick="likePost(this)">👍 Like</button>
+        </div>
+        
+        <div class="post">
+            <div class="user">
+                <a href="./profile.html">
+                <img src="./images/bioluminescent.webp" alt="User Icon">
+                </a>
+                <p class="username">@ShroomKingdom 🍄</p>
+            </div>
+            <p class="bio">Nature’s recyclers ♻️ | Decomposing legends 🦠 | Underground mycelium internet 🌐 | Some tasty, some deadly 👀</p>
+            <p>Greetings, earthlings! 🍄 We are fungi, the planet’s ultimate recyclers. We don’t rely on sunlight like plants do. We get our energy by breaking down organic material, making sure nothing goes to waste. Some of us even team up with plants, connecting them through underground mycelium networks, aka nature’s internet. Yep, we help plants talk to each other and share nutrients! We come in all forms. Some of us are delicious mushrooms, some are used in medicine, and some... well, let’s just say you really shouldn’t eat us. Fun fact: the largest living organism on Earth is actually one of us, a single fungal colony in Oregon that spreads over 3.8 square miles! Whether we’re feeding forests or cleaning up the ecosystem, we keep life running smoothly. You might not always see us, but trust us, we’re everywhere. 🌱💀 #DecomposersRule #MyceliumNetwork</p>
+            <button onclick="likePost(this)">👍 Like</button>
+        </div>
+    </div>
+    <script>
+        function likePost(button) {
+            let likes = button.innerText.match(/\d+/);
+            let likeCount = likes ? parseInt(likes[0]) + 1 : 1;
+            button.innerText = `👍 Like (${likeCount})`;
+        }
+    </script>
+</body>
+</html>

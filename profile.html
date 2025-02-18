@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversity Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #15202B, #1B2836, #26364B);
+            background-size: 400% 400%;
+            animation: gradientBG 8s infinite alternate;
+            color: #E1E8ED;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .profile {
+            background: #192734;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .username {
+            font-weight: bold;
+            font-size: 20px;
+            color: #1DA1F2;
+        }
+        .bio {
+            font-style: italic;
+            color: #8899A6;
+        }
+        .hashtags {
+            color: #1DA1F2;
+            font-weight: bold;
+        }
+        .follow-btn {
+            background-color: #1DA1F2;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="./images/firesalamander.jpg" alt="Profile Picture">
+        <p class="username">@HoppinEvolution 🐸</p>
+        <p class="bio">Masters of land & water 🌍 | Moist skin crew 💦 | Metamorphosis experts 🐣➡️🐸</p>
+        <p>"Breathing through my skin, hopping from ponds to forests, and ruling the ecosystem. Amphibians are evolution’s masterpiece! 🐸🌱 #StaySlimy #MetamorphosisMasters"</p>
+        <button class="follow-btn">Follow</button>
+    </div>
+    
+    <div class="profile">
+        <img src="./images/bioluminescent.webp" alt="Profile Picture">
+        <p class="username">@ShroomKingdom 🍄</p>
+        <p class="bio">Nature’s recyclers ♻️ | Decomposing legends 🦠 | Mycelium internet 🌐 | Some tasty, some deadly 👀</p>
+        <p>"Recycling life, connecting forests, and feeding the world. You may not see us, but trust us, we’re everywhere. 🍄🌱 #DecomposersRule #MyceliumNetwork"</p>
+        <button class="follow-btn">Follow</button>
+    </div>
+</body>
+</html>
